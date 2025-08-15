@@ -976,15 +976,18 @@ Happy Birthday Handsome😚Tumhari majodgi meri zindagi ka ek behatreen waqiya h
   `;  
       const typedLetterElement = document.getElementById("typed-letter");  
       const readAgainBtn = document.getElementById("readAgainBtn");  
+      const nextBtn = document.querySelector("#nextbtn");
       const nxtBtn = document.getElementById("nxtBtn");
       let hasTypedLetter = false;  
     
-      function startLetterTyping() {  
+     function startLetterTyping() {  
         letterCharIndex = 0;  
         typedLetterElement.textContent = "";  
         readAgainBtn.style.display = "none";  
+        nxtBtn.style.display = "none";
         typeLetter();  
-      }  
+      }
+        
     
       function typeLetter() {  
         if (letterCharIndex < letterContent.length) {  
@@ -995,8 +998,7 @@ Happy Birthday Handsome😚Tumhari majodgi meri zindagi ka ek behatreen waqiya h
           readAgainBtn.style.display = "inline-block";  
           nxtBtn.style.display = "inline-block";
         }  
-      }  
-    
+      }
       function readAgain() {  
         clearTimeout(letterTypingTimeout);  
         startLetterTyping();  
